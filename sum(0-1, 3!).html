@@ -1,8 +1,25 @@
 <meta charset="utf-8">
 
 <script type="text/javascript">
+   
+    var n = +prompt("Введите число");
     
+    if(isNaN(n)){
+        document.write("Нужно ввести число");
+    }
     
-    
+    else if(n<0){
+        document.write("Нужно ввести положительное число");
+    }
+        
+        
+    else{
+        
+        var sum = 0;
+        for(var i = 0; i <= n; i++)
+            sum = sum +i; //sum += i;
+           // document.write(i + "" + sum + "<br>");
+    }
+    document.write(sum);
     
 </script>
