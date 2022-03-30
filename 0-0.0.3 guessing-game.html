@@ -2,9 +2,19 @@
 
 <script type="text/javascript">
  
-    var answer = Math.random();
-    document.write(answer);
+    var answer = parseInt(Math.random() * 100);
+    var userAnswer = +prompt("Угадайте число от 0 до 100 ;)")
     
+    if(userAnswer == answer){
+        document.write("Поздравляю, вы угадали!");
+    }
     
+    else if(userAnswer > answer){
+        document.write("Загаданное число меньше.");
+    }
+    
+     else if(userAnswer < answer){
+        document.write("Загаданное число больше.");
+    }
     
 </script> 
