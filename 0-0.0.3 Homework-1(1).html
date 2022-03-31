@@ -2,23 +2,23 @@
 
 <script type="text/javascript">
  
- var i=0;
+ var quest = 0;
  var userAnswer;
     
  var userAnswer= prompt("Это маленькая птичка. Как зовут её?").toLowerCase() 
  if(userAnswer == "Синичка")
- i++;
- alert("Поздравляю, вы угадали!");  
+ quest++;
+ //alert("Поздравляю, вы угадали!");  
     
  var userAnswer= prompt("Кто один имеет рог? Отгадайте!").toLowerCase() 
  if(userAnswer == "Носорог")
- i++;
- alert("Поздравляю, вы угадали!");     
+ quest++;
+ //alert("Поздравляю, вы угадали!");     
  
  var userAnswer= prompt("Прилетел весной певец. Подскажите, кто?").toLowerCase() 
  if(userAnswer == "Скворец")
- i++;
- alert("Поздравляю, вы угадали!");    
-
-    alert("Угадано " + i + " загадок.");
+ quest++;
+ //alert("Поздравляю, вы угадали!");    
+alert("Вы отгадали "+ quest + " загадок!");
+  //  alert("Угадано " + i + " загадок.");
 </script>
