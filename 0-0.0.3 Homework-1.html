@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+   /*1 загадка*/
+    var userAnswer = +prompt("Это маленькая птичка. Как зовут её?") //Синичка
+    var answer = "Синичка"
+    var maxTryCount = 3;
+
+     for(var tryCount = 1; tryCount < maxTryCount; tryCount++){
+         if(userAnswer == answer){
+            alert("Поздравляю, вы угадали!");
+               break;
+       if(userAnswer > answer && userAnswer < answer){
+           alert("Ошибка");
+        }
+         
+         userAnswer = +prompt("Попробуйте еще раз :З \n У вас осталось " + (maxTryCount-tryCount) + " попыток.")
+     }
+     
+     }
+
+ if(tryCount == maxTryCount)
+    {alert("Вы проиграли.");
+    }
+        
+    alert("Ответ: " + answer);
+
+
+</script>
