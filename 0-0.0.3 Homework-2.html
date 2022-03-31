@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+    var a = prompt("Введите сумму вклада:");
+    var b = prompt("Введите ежегодный процент по вкладу:");
+    i=0;
+    
+    a = parseInt(a); 
+    b = parseInt(b);
+    
+    c=a*b + a;
+    i++
+    //alert("Вклад за " +i + " год: " + c);
+    document.write("Вклад за " +i + " год: " + c);
+    
+    do {
+        
+    c=a*b + c;
+    i++
+   // alert("Вклад за " +i + " год: " + c);
+        document.write("Вклад за " +i + " год: " + c);
+    }
+        
+    while(i<5)
+    
+   document.write("Вклад за " +i + " год: " + c);
+    
+</script>

@@ -1,0 +1,34 @@
+ <meta charset="utf-8">
+
+<script type="text/javascript">
+    
+    var answer = +prompt("Ход ИГРОКА-1. Введите число от 0 до 100.");
+    var userAnswer = +prompt("Ход ИГРОКА-2. Угадайте число от 0 до 100.")
+    var maxTryCount = 102;
+    
+     for(var tryCount = 1; tryCount < maxTryCount; tryCount++){
+        if(userAnswer == answer){
+        alert("Поздравляю, вы угадали!");
+        break;  
+        }
+         
+       else if(userAnswer > answer){
+            alert("Загаданное число меньше.");
+        }
+
+         else if(userAnswer < answer){
+            alert("Загаданное число больше.");
+        }  
+         
+         userAnswer = +prompt("Попробуйте еще раз")
+     }
+    
+        if(tryCount == maxTryCount)
+    {alert("U loose.");
+    }
+    
+    
+    alert("Я загадал: " + answer);
+    
+    
+</script>
