@@ -1,0 +1,49 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+    
+   //var english = ["food", "bike", "apple", "do", "mean"]; 
+   //var russian = ["еда", "велосипед", "яблоко", "делать", "иметь в виду"];
+    
+   //1
+    var words = [
+       ["food", "еда"],
+       ["bike", "велосипед"],
+       ["apple", "яблоко"],
+       ["do", "делать"],
+       ["mean", "иметь в виду"],
+   ];
+    
+    //цикл Вайл - будет работать до тех пор, пока в массиве есть слова
+    
+    while(words.length != 0){
+    
+            var i = parseInt(Math.random() * words.length); //2. генерируем случайное слово
+            //3. Просим юзера вспомнить перевод слова
+            var userTranslate = prompt("Как перевести слово: " + words[i][0]);
+
+                if(userTranslate == words[i][1]){
+                    alert("Правильно!");
+                    words.splice(i, 1);
+                } else {
+                    alert("Правильный ответ: " + words[i][1]);
+                }
+    }
+    
+    
+    alert("Поздравляем! Все слова выучены!");
+    
+    
+    
+    
+    
+    /*
+   //обращаемся к номерам и элементам массива 
+    alert(words[0]);    //"food", "еда"
+    alert(words[1]);    //"bike", "велосипед"
+    alert(words[0][0]); //"food"
+    alert(words[0][1]); //"еда"
+    alert(words[0][3]); // undefined*/
+    
+    
+</script>
