@@ -2,10 +2,19 @@
 
 <script type="text/javascript">
     
-    function generateText(letters, lenth){ // массив принимает текстовое выражение и равно длину сгенерированных букв
+    function generateText(letters, length){ // массив принимает текстовое выражение и равно длину сгенерированных букв
     
+            var text = "";
+            for(var i = 0; i < length; i++){
+                var n = getRandomNumber(letters.length - 1);
+                text = text + letters[n];
+            }
+        return text;
+    }
+        
+       function getRandomNumber(max){ 
     //ToDo сгенерировать случайную последовательность
-        return "фаааффафафааф";
+            return Math.round(Math.random() * max);
     }
     
     alert("Вас приветствует программа по обучению слепой печати.");
@@ -15,14 +24,14 @@
             alert("Положите 4 пальца левой руки - мизинец, безымянный, средний и указательный на клавиши ф, ы, в, а. Запомните, что буква А находится под вашим указательным пальцем, а Ф - под мизинцем. \nТеперь неспеша набирайте текст. Постарайтесь не смотреть на клавиатуру.");
 
             //генерируем вызо букв А и Ф случайно:
-            var text = generateText(["А", "Ф"], 10); //10 раз - фаааффафафааф
+            var text = generateText(["ф", "а"], 10); //10 раз - фаааффафафааф
 
             //показываем текст и просим его ввести
             var userText = prompt(text);
 
             if(userText == text){
                 alert("Все верно! Переходим к следующему уровню.");
-                break
+                break;
             } else {
                 alert("Вы ошиблись. Попробуйте еще.");
             }
