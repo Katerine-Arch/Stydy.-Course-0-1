@@ -31,6 +31,17 @@
     // 1! = 0!*1
     // 0! = 1
     
+    
+    function recursiveFactorial(n){
+        if(n == 0)
+            return 1;
+        
+        else
+            return recursiveFactorial(n-1)*n;
+    }
+    
+    var rf = recursiveFactorial(4);
+    
     var f = factorial(5);
     var a = max(34, 68);
     var c = max(a, 98) + 4;
