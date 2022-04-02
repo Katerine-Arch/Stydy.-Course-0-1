@@ -2,55 +2,47 @@
 
 <script type="text/javascript">
     
-    
+    function askForWords(words){
+                while(words.length != 0){
 
-    var numbers = [];
-    
-    
-    for(var i = 0; i < 5; i++){
-        var randomNumber = parseInt(Math.random() * 100);
-        numbers.push(randomNumber);
+                    var i = parseInt(Math.random() * words.length); 
+                    var userTranslate = prompt("Как перевести слово: " + words[i][0]);
+
+                        if(userTranslate == words[i][1]){
+                            alert("Правильно!");
+                            words.splice(i, 1);
+                        } else {
+                            alert("Правильный ответ: " + words[i][1]);
+                        }
+                }
     }
+
+    var easyWords = [
+       ["food", "еда"],
+       ["bike", "велосипед"],
+       ["apple", "яблоко"],
+       ["do", "делать"],
+       ["mean", "иметь в виду"],
+   ];
     
-    /* Вариант записи массива вручную
-    numbers.push(42); //42
-    numbers.push(18); //42, 18
-    numbers.push(64); // 42, 18, 64
-    numbers.pop();    // 42, 18
-    var m - numbers.pop(); //В переменной m = 18, а в массиве останется только 42
-    */
+     
+    askForWords(easyWords);
+    
+    alert("Поздравляем! Все слова выучены! Переходим на следующий уровень.");
     
     
-    alert("Запомните числа и их порядок: " + numbers );
+    //создадим массив со сложными словами
+    var hardWords = [
+       ["chainsaw", "бензопила"],
+       ["squirrel", "белка"],
+       ["castle", "замок"],
+       ["homeland", "родина"],
+       ["sewerage", "канализация"], 
+       ["bottom", "дно"], 
+    ]
     
-    var userAnswer = +prompt("Каким было первое число?");
-    //alert(numbers[0]);
-
-    if(userAnswer == numbers[0]) {
-                alert("Все верно!");        
-            } else{
-                alert("Не верно! Правильный ответ: " + numbers[0]); 
-            }
-
-    userAnswer = +prompt("А последнее?");
-    //alert(numbers.length); //их 5
-    //alert(numbers[numbers.length - 1]); 
-    
-
-    if(userAnswer == numbers[numbers.length - 1]) {
-            alert("Все верно!");        
-        } else{
-            alert("Не верно! Правильный ответ: " + numbers[numbers.length - 1]); 
-        }
-
-    var n = parseInt(Math.random() * numbers.length);
-
-    userAnswer = +prompt("А как насчет числа под номером " + (n + 1) + "?");
-
-    if(userAnswer == numbers[n]) {
-            alert("Все верно!");        
-        } else{
-            alert("Не верно! Правильный ответ: " + numbers[n]); 
-        }    
+  
+ askForWords(hardWords);
+   
     
 </script>
