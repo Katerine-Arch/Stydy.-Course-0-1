@@ -1,29 +1,64 @@
 <meta charset="utf-8">
 
 <script type="text/javascript">
+ 
+   /*   Написать функцию, которая принимает в качестве параметра число n. Результатом работы функции является массив из N элементов со значениями 1, 2, 3… n.*/
+   alert("Создадим ваш массив.");
+   var userAnswer = +prompt("Введите конечное число массива.");
     
-alert("Создадим ваш массив.");
+    const n = userAnswer;
+ let arr = Array(n).fill(0).map(function(val,index){return index+1;});
+ console.log(arr);
+/*
+    
+function facorial(n) {
+    var N = [];
+    for(var i = 1; i <= n; i++)
+    {N.push(i);}
+    return N;
+}
+    
+    
+ var rf = recursiveFactorial(n);
+    
+        function recursiveFactorial(n){
+        if(n == 0)
+            return 1;
+        
+        else
+            return recursiveFactorial(n-1)*n;
+    }
+    
+//console.log(facorial(n));//(7)*[1, 2, 3, 4, 5, 6, 7]
 
+
+    document.write("Результат работы функции - массив: " + N[n]); 
+
+
+    do { 
+        function  generateNumberArray (Lenth){
+        var N = [];  
+
+                for (var i = 0; i  <  n; i++){ 
+                    var N = getNumber(n);
+                    number.push(N);
+                }
+                return   N;
+        }
+    while(n == N);
+       */ 
+     /*   
 var userAnswer = +prompt("Введите конечное число массива.");
 //var numbers = generateNumberArray(n);   
 var n = parseInt(userAnswer); //?? * numbers.length);   
     
-   do { 
-        function  generateNumberArray (Length){
-        var number = [];  
-
-                for (var i = 0; i  <  Length; i++){ 
-                    var numbers = getNumber(n);
-                    number.push(number);
-                }
-                return   number;
-        }
+   
    }
 while(n == userAnswer);
+          
 
-
-alert("Результат работы функции - массив: " + numbersLength[n]);   
-    
+alert("Результат работы функции - массив: " + N[n]);   
+*/    
     
     
 </script>
