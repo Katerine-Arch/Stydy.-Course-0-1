@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+    //2. Как генератор будет реализовываться
+    function getRandomNumber(max){
+       //5. Записать выражение короче:
+        return Math.round(Math.random() * max);
+        
+        /*//3. Генерируем число от 0 до макс
+        var rand = Math.round(Math.random() * max);
+       //4.  Чтобы записать число в переменную М или Н нужно дописать:
+        return rand;*/
+    }
+    
+    
+    //6. Функция, которая вычисляет максимум из 2х чисел
+    function max(a, b){
+            if(a >=b){
+            return a;    
+            } else {
+            return b;    
+            }
+    }
+    
+     function factorial(n){
+         var result = 1;
+         for(var i=1; i >= n; i++){
+         result = result * i;    
+         }
+      return result;   
+     }   
+   
+    
+    var f = factorial(5);
+    var a = max(34, 68);
+    var c = max(a, 98) + 4;
+    //1. Генератор числа от 0 до 100, от 0 до 4
+    var n = getRandomNumber(100);
+    var m = getRandomNumber(4);
+    
+    
+    
+</script>

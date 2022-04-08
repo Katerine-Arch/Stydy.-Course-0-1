@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+ 
+   /*   Написать функцию, которая принимает в качестве параметра число n. Результатом работы функции является массив из N элементов со значениями 1, 2, 3… n.*/
+   
+    //1. 
+    /*alert("Создадим ваш факториал.");
+   
+    function factorial(n){
+            var N = 1;
+            for(var i =1; i <= userAnswer; i++){
+            N = N * i; //or N = N * i;
+            }
+       return N; 
+    }
+    
+    var userAnswer = +prompt("Введите конечное число массива.");
+    var n = factorial(5);
+    
+    alert("Все числа факториала: " + n);*/
+    
+    //2.
+    
+    alert("Создадим ваш массив.");
+    
+     function getRandomNumber(max){
+         return userAnswer * max;
+     }
+    
+     function generateRandomNumberArray(Lenth){
+            var arr = [];  
+            for (var i = 0; i  <  Lenth; i++){ 
+            var randomNumber = getRandomNumber(100);
+            arr.push(randomNumber);
+            document.write("Ваш массив: " + (i+1) + ' of ' + Lenth + '<br/>');
+            }
+         return arr;
+     }
+
+            
+    
+     var numbers = generateRandomNumberArray(10);
+     var userAnswer = +prompt("Введите конечное число массива.");
+    
+    //alert("Ваш массив: " + arr);
+    
+</script>

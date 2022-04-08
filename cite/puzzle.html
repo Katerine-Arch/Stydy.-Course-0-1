@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SoftWalls - Мягкие панели </title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        
+        var score = 0;
+        
+        function checkAnswer(inputId, answers){
+            var userAnswer = document.getElementById(inputId).value;
+            userAnswer = userAnswer.toLowerCase();
+            for(var i=0; i < answers.length; i++){
+                if(userAnswer == answers[i]){
+                    score++;
+                    break;
+                }
+            }
+        }
+        
+        function checkAnswers(){
+            checkAnswer("userAnswer1", ["синичка", "sinichka"])
+            checkAnswer("userAnswer2", ["носорог", "nosorog"])
+            checkAnswer("userAnswer3", ["скворец", "scvorets"])
+            
+            alert("Вы отгадали " + score + " загадок.");
+        }
+        
+    </script>    
+</head>
+    
+    <body>
+    <div class="content">
+        <div class="header">
+            <a href="index.html">Главная страница</a>
+            <a href="puzzle.html">Загадки</a>
+            <a href="guess.html">Угадайка</a>
+        </div>
+        
+        <div class-"contentWrap">
+            <div class-"content">
+                <div class="center">
+                    <h1>Игра: загадки.</h1>
+                    
+                        <div class="box">
+                            
+                            <p>Маленькая птичка. Как зовут её?</p>
+                            <input type="text" id="userAnswer1">
+                            
+                            <p>Кто один имеет рог? Отгадайте!</p>
+                            <input type="text" id="userAnswer2">
+                            
+                            <p>Прилетел весной певец. Подскажите, кто?</p>
+                            <input type="text" id="userAnswer3">
+                            
+                            <br>
+                            <a href="#" onclick="checkAnswers();">Ввести ответ</a>
+                            
+                            
+                        </div>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    
+</html>    
