@@ -8,12 +8,13 @@
     
     <body>
        <div class="content">
-        <div class="header">
-            <a href="#">Главная страница</a>
-            <a href="puzzle.html">Загадки</a>
-            <a href="guess.html">Угадайка</a>
-        </div>
-        
+
+           <?php
+                include "menu.php";      
+           ?>
+           
+           
+           
         <h1>SoftWalls "TiTo" - Мягкие панели</h1>
         
         <div class="center">
@@ -27,15 +28,17 @@
 
             <p>На этом сайте вы сможете выбрать визуальный дизайн вашего интерьера, увидеть примеры и сделать заказ, который мы будем рады выполнить. Наша галерея выполненных работ: <a href="https://github.com/Katerine-Arch"> Получить вдохновение</a></p>
 
-                <p>Ссылки моего он-лайн обучения: <a href="#">Главная страница</a>
-                <a href="puzzle.html">Загадки</a>         <a href="guess.html">Угадайка</a></p>
+                <p>Ссылки моего он-лайн обучения: <br><a href="index.php">Главная страница</a><br>
+                <a href="puzzle.php">Загадки</a>   <br>      <a href="guess.php">Угадайка</a> <br>
+           <a href="guess-2.php">Угадайка мультиплеер</a> <br>
+        <a href="passw-generator.php">Генератор паролей</a></p>
 
             </div>
         </div>
     </div>
         
         <div class="footer">
-   Copyright &copy; SW TiTo    
+   Copyright &copy; <?php echo date("Y");?> SW TiTo    
         </div>
         
         
